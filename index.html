@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.E.S Pharmacy College</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: #0a3d62;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  background: #1e3799;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  background: #74b9ff;
+  color: white;
+  padding: 60px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* Sections */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 5px;
+  display: inline-block;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active {
+  background: #333;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  padding: 30px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-container div {
+  width: 250px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>S.E.S Pharmacy College</h1>
+  <p>Excellence in Pharmaceutical Education</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Courses</a>
+  <a href="#">Facilities</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+  Welcome to Our Pharmacy College
+</div>
+
+<section>
+  <h2>About Us</h2>
+  <p>We provide high-quality pharmacy education with modern labs and experienced faculty.</p>
+</section>
+
+<!-- Slider Section -->
+<section>
+  <h2>Gallery</h2>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="image1.jpg">
+      <img src="image2.jpg">
+      <img src="image3.jpg">
+    </div>
+
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+</section>
+
+<section>
+  <h2>Courses</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>B.Pharm</h3>
+      <p>4-year degree program</p>
+    </div>
+    <div class="card">
+      <h3>D.Pharm</h3>
+      <p>2-year diploma course</p>
+    </div>
+    <div class="card">
+      <h3>M.Pharm</h3>
+      <p>Postgraduate program</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Facilities</h2>
+  <div class="cards">
+    <div class="card">Laboratories</div>
+    <div class="card">Library</div>
+    <div class="card">Hostel</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div>
+      <h3>About College</h3>
+      <p>Providing quality pharmacy education with modern infrastructure.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <p><a href="#">Home</a></p>
+      <p><a href="#">Courses</a></p>
+      <p><a href="#">Admissions</a></p>
+      <p><a href="#">Contact</a></p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>Principal</p>
+      <p>+91 9741873355</p>
+      <p>sespharmacysgp@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2012 S.E.S Pharmacy College | All Rights Reserved
+  </div>
+</footer>
+
+<script>
+let index = 0;
+const slides = document.getElementById("slides");
+const totalSlides = slides.children.length;
+
+function showSlide(i) {
+  if (i >= totalSlides) index = 0;
+  else if (i < 0) index = totalSlides - 1;
+  else index = i;
+
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function moveSlide(step) {
+  showSlide(index + step);
+}
+
+function currentSlide(i) {
+  showSlide(i);
+}
+</script>
+
+</body>
+</html>
